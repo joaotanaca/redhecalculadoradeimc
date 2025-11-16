@@ -1,0 +1,179 @@
+.screen-card.animated {
+  animation: slideUp 0.4s ease-out;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 40px;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  border-radius: 16px;
+  margin-bottom: 32px;
+}
+
+.dark-mode .result-container {
+  background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+}
+
+.imc-value {
+  font-size: 80px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.dark-mode .imc-value {
+  color: #f9fafb;
+}
+
+.badge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  padding: 8px 20px;
+  border-radius: 9999px;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-range {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.dark-mode .badge-range {
+  color: #9ca3af;
+}
+
+.result-explanation {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #374151;
+  max-width: 520px;
+}
+
+.dark-mode .result-explanation {
+  color: #d1d5db;
+}
+
+.support-box {
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #374151;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  border-left: 4px solid #7c3aed;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .support-box {
+  background: #1f2937;
+  color: #d1d5db;
+  border-left-color: #a78bfa;
+}
+
+.button-tertiary {
+  background: transparent;
+  color: #7c3aed;
+  border: 2px solid #7c3aed;
+}
+
+.button-tertiary:hover {
+  background: #7c3aed;
+  color: white;
+}
+
+.dark-mode .button-tertiary {
+  color: #a78bfa;
+  border-color: #a78bfa;
+}
+
+.dark-mode .button-tertiary:hover {
+  background: #a78bfa;
+  color: #1f2937;
+}
+
+.safety-message {
+  padding-top: 32px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.dark-mode .safety-message {
+  border-top-color: #4b5563;
+}
+
+.safety-message p {
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.dark-mode .safety-message p {
+  color: #9ca3af;
+}
+
+.modal-large {
+  max-width: 500px;
+}
+
+.tips-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+}
+
+.tip-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+}
+
+.dark-mode .tip-item {
+  background: #374151;
+}
+
+.tip-number {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.tip-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.dark-mode .tip-text {
+  color: #d1d5db;
+}
+
