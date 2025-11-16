@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,9 +17,30 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #B78838 0%, #D4A574 50%, #FEDA90 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 247, 213, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(254, 218, 144, 0.2) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .dark-mode .app-container {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2418 50%, #1f1812 100%);
+}
+
+.dark-mode .app-container::before {
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(183, 136, 56, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(126, 93, 38, 0.1) 0%, transparent 50%);
 }

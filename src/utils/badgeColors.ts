@@ -14,3 +14,5 @@ export function getBadgeColor(classification: IMCClassification): BadgeColors {
   return colorMap[classification.color] || 'gray';
 }
 
+
+

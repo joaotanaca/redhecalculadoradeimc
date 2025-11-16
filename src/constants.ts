@@ -55,3 +55,5 @@ export const SAFETY_MESSAGE = 'Essas informações são de caráter educativo. C
 
 export const IMC_INFO = 'IMC = peso ÷ (altura²). Mede a relação entre peso e altura.';
 
+
+

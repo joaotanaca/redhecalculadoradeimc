@@ -2,10 +2,15 @@
   background: white;
   border-radius: 24px;
   padding: 48px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 
+    0 20px 60px rgba(183, 136, 56, 0.25),
+    0 8px 24px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.8) inset;
   max-width: 540px;
   width: 100%;
   animation: slideUp 0.4s ease-out;
+  position: relative;
+  backdrop-filter: blur(10px);
 }
 
 .dark-mode .screen-card {
@@ -33,10 +38,12 @@
 
 .screen-title {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 800;
   color: #111827;
   margin-bottom: 8px;
   line-height: 1.2;
+  font-family: "Inter Tight", sans-serif;
+  letter-spacing: -0.5px;
 }
 
 .dark-mode .screen-title {
@@ -94,8 +101,8 @@
 
 .input-field:focus {
   outline: none;
-  border-color: #7c3aed;
-  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+  border-color: #B78838;
+  box-shadow: 0 0 0 3px rgba(183, 136, 56, 0.15);
 }
 
 .dark-mode .input-field {
@@ -105,8 +112,8 @@
 }
 
 .dark-mode .input-field:focus {
-  border-color: #a78bfa;
-  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.2);
+  border-color: #FEDA90;
+  box-shadow: 0 0 0 3px rgba(254, 218, 144, 0.25);
 }
 
 .input-field.input-error {
@@ -163,13 +170,15 @@
 
 .unit-button-active {
   background: white;
-  color: #7c3aed;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #B78838;
+  box-shadow: 0 2px 8px rgba(183, 136, 56, 0.2);
+  font-weight: 700;
 }
 
 .dark-mode .unit-button-active {
-  background: #4b5563;
-  color: #a78bfa;
+  background: #B78838;
+  color: white;
+  box-shadow: 0 2px 8px rgba(183, 136, 56, 0.4);
 }
 
 .button-group {
@@ -202,14 +211,23 @@
 }
 
 .button-primary {
-  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+  background: linear-gradient(135deg, #B78838 0%, #D4A574 100%);
   color: white;
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+  box-shadow: 
+    0 4px 16px rgba(183, 136, 56, 0.4),
+    0 2px 8px rgba(183, 136, 56, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  letter-spacing: 0.3px;
 }
 
 .button-primary:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.5);
+  box-shadow: 
+    0 6px 20px rgba(183, 136, 56, 0.5),
+    0 3px 10px rgba(183, 136, 56, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #C59640 0%, #E0B584 100%);
 }
 
 .button-secondary {
@@ -239,22 +257,28 @@
 .link-button {
   background: none;
   border: none;
-  color: #7c3aed;
+  color: #B78838;
   font-size: 14px;
+  font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 4px;
   cursor: pointer;
   padding: 8px;
   margin: 0 auto;
-  transition: color 0.2s;
+  transition: all 0.2s;
 }
 
 .link-button:hover {
-  color: #a855f7;
+  color: #D4A574;
+  text-decoration-thickness: 2px;
 }
 
 .dark-mode .link-button {
-  color: #a78bfa;
+  color: #FEDA90;
+}
+
+.dark-mode .link-button:hover {
+  color: #FFF7D5;
 }
 
 .modal-overlay {
@@ -303,8 +327,10 @@
 
 .modal-title {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 800;
   color: #111827;
+  font-family: "Inter Tight", sans-serif;
+  letter-spacing: -0.3px;
 }
 
 .dark-mode .modal-title {
@@ -351,4 +377,5 @@
 .dark-mode .modal-text {
   color: #d1d5db;
 }
+
 

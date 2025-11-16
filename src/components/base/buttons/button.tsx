@@ -142,8 +142,6 @@ export interface CommonProps {
     size?: keyof typeof styles.sizes;
     /** The color variant of the button */
     color?: keyof typeof styles.colors;
-    /** Alias for onClick used in some places of the codebase */
-    onPress?: () => void;
     /** Icon component or element to show before the text */
     iconLeading?: FC<{ className?: string }> | ReactNode;
     /** Icon component or element to show after the text */
@@ -190,18 +188,12 @@ export const Button = ({
     const isLinkType = ["link-gray", "link-color", "link-destructive"].includes(color);
 
     noTextPadding = isLinkType || noTextPadding;
-    // Normalize `onPress` -> `onClick` for consumers that use mobile-like prop name
-    const normalizedOtherProps = { ...(otherProps as any) };
-    if (normalizedOtherProps.onPress && !normalizedOtherProps.onClick) {
-        normalizedOtherProps.onClick = normalizedOtherProps.onPress;
-        delete normalizedOtherProps.onPress;
-    }
 
     let props = {};
 
     if (href) {
         props = {
-            ...normalizedOtherProps,
+            ...otherProps,
 
             href: disabled ? undefined : href,
 
@@ -212,9 +204,9 @@ export const Button = ({
         };
     } else {
         props = {
-            ...normalizedOtherProps,
+            ...otherProps,
 
-            type: normalizedOtherProps.type || "button",
+            type: otherProps.type || "button",
             isPending: loading,
             isDisabled: disabled,
         };

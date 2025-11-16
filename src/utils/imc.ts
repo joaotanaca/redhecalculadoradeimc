@@ -38,3 +38,5 @@ export function formatIMC(imc: number): string {
   return rounded.toFixed(1);
 }
 
+
+

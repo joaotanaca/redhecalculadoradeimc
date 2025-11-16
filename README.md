@@ -75,3 +75,5 @@ npm run build
 - Cores semânticas para classificações
 - Interface limpa e moderna
 
+
+

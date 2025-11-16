@@ -18,5 +18,15 @@
         "noFallthroughCasesInSwitch": true
     },
     "include": ["src"],
+    "exclude": [
+        "src/**/*.working.tsx",
+        "src/**/*.test.tsx",
+        "src/**/*.test.ts",
+        "src/App.simple.tsx",
+        "src/App.fixed.tsx",
+        "src/App.minimal.tsx",
+        "src/App.test-tailwind.tsx",
+        "src/components/SimpleModal.tsx"
+    ],
     "references": [{ "path": "./tsconfig.node.json" }]
 }
